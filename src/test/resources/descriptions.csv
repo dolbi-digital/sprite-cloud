@@ -1,0 +1,18 @@
+Make sure you are not recording dynamic IDs of elements
+Check that class attribute based XPath is well formed
+Verify that your test does not interact with elements invisible because of z-order
+Ensure that a test is capable of waiting for a page to load
+Some elements may appear on a page after loading data with AJAX request
+Some elements may appear after client-side time consuming JavaScript calculations
+Event based click on an element may not always work
+Entering text into an edit field may not have effect
+Scrolling an element into view may be a tricky task
+Verify cell value in a dynamic table
+Finding an element by displayed text has nuances
+Follow the progress of a lengthy process and continue upon completion
+Check if element is visible on screen
+Demo application with dynamically generated element attributes
+Placing mouse over an element may change DOM and make the element unavailable
+Non-breaking space looks like a normal one on screen. It may lead to confusion when building XPath
+Make element visible to enter text
+Look inside Shadow DOM component
