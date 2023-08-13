@@ -3,7 +3,6 @@ package tests;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
-import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
@@ -41,7 +40,6 @@ public class UITest {
         driver.quit();
     }
 
-    @Step
     @Test
     void checkChapters() {
         HomePage homePage = new HomePage(driver);
@@ -56,7 +54,6 @@ public class UITest {
         return new Object[][] {{"pwd1", "pwd1"}, {"pwd", ""}, {"", "pwd"}, {"pwd", "pwd1"}, {"", ""}};
     }
 
-    @Step
     @Test(dataProvider = "data-provider")
     void checkFailLogin(String user, String pass) {
         HomePage homePage = new HomePage(driver);
@@ -66,7 +63,6 @@ public class UITest {
         assertEquals(sampleAppPage.checkAuthMessage(user, pass), "Invalid username/password");
     }
 
-    @Step
     @Test
     void checkSuccessLogin() {
         String user = "user1";
